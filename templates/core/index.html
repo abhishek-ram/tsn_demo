@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static "core/index.css" %}">
+</head>
+<body>
+<nav></nav>
+<div class="container">
+  <h1>{{ product.name }}</h1>
+  <p>
+    <span class="stars-outer" data-rating="{{ product.average_rating }}">
+      <span class="stars-inner"></span>
+    </span> {{ product.total_ratings }} ratings</p>
+  <div class="row">
+    <img src="https://source.unsplash.com/IndbOxCrVio" alt="">
+    <div>
+      <h3>Description</h3>
+      <p>{{ product.description }}</p>
+    </div>
+
+  </div>
+</div>
+<script type="application/javascript" src="{% static "core/index.js" %}"></script>
+</body>
+</html>
